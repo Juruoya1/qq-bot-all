@@ -1,0 +1,24 @@
+account:
+  uin: ${QQ_ACCOUNT}
+  password: "${QQ_PASSWORD}"
+  encrypt: false
+  status: 0
+  relogin:
+    delay: 3
+    interval: 3
+    max-times: 0
+
+heartbeat:
+  interval: 5
+
+message:
+  post-format: array
+  report-self-message: false
+
+servers:
+  - ws:
+      host: 0.0.0.0
+      port: 6700
+      middlewares:
+        heartbeat:
+          interval: 5
